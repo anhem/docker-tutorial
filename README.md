@@ -11,7 +11,7 @@ It mainly consists of instructions, layers, images and containers.
  
 ## Installation
 
-install docker for your OS. Linux distros usually get their installation through its package manager.
+install docker for your OS. Linux distros usually get their installation through their package manager.
 
 [Mac installation](https://docs.docker.com/docker-for-mac/install/)
 
