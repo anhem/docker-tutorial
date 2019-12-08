@@ -1,4 +1,4 @@
-#Docker - hands on tutorial
+# Docker - hands on tutorial
 
 install docker for your OS. Linux distros usually get their installation through its package manager.
 
@@ -6,7 +6,7 @@ install docker for your OS. Linux distros usually get their installation through
 
 [Windows installation](https://docs.docker.com/docker-for-windows/install/)
 
-##verify that docker is working
+## verify that docker is working
 
 Download the docker image **hello-world** from the [Docker Hub](https://hub.docker.com/) registry.
 
