@@ -69,7 +69,7 @@ Tailing dev/null is a simple way of making sure a process never finishes by itse
 ```
 tail -f /dev/null
 ```
-The file `Dockerfile_keep-alive` has two instructions
+The file [Dockerfile_keep-alive](Dockerfile_keep-alive) has two instructions
 
 * `FROM` defines what docker image we want our docker image to be based on. In this case Alpine Linux, which is a lightweight Linux distribution
 * `ENTRYPOINT` is tailing dev/null
