@@ -1,5 +1,16 @@
 # Docker - hands on tutorial
 
+Docker is a container environment that runs on top of the Linux Kernel. 
+
+It mainly consists of instructions, layers, images and containers. 
+
+* An instruction is a command such as RUN and COPY from a Dockerfile
+* A layer is the result of an executed instruction from a Dockerfile
+* An image is the sum of all layers created from a Dockerfile. All layers are read-only.
+* A container is the last layer on top of an image and is writeable. Multiple containers can be created from the same image.
+ 
+## Installation
+
 install docker for your OS. Linux distros usually get their installation through its package manager.
 
 [Mac installation](https://docs.docker.com/docker-for-mac/install/)
@@ -8,30 +19,32 @@ install docker for your OS. Linux distros usually get their installation through
 
 ## verify that docker is working
 
-Download the docker image **hello-world** from the [Docker Hub](https://hub.docker.com/) registry.
+To verify that docker is working probperly download the docker image `hello-world` from [Docker Hub](https://hub.docker.com/) with
 
 ```
 $ docker pull hello-world
 ```
-Start a docker container by using the docker image. If working properly some `Hello from Docker!` should be displayed along with some other information.
+Start a docker container using the downloaded docker image with
 ```
 $ docker run hello-world
 ```
+If working properly `Hello from Docker!` should be displayed along with some other information.
+
 It is also possible to start the docker container directly. The docker image will be downloaded automatically.
 
 ## Docker tags (image version/variant)
 
 Tags are used to differentiate between versions/variants of the same image. 
-If no tag is specified when starting a container, the `latest` image will be used. 
-To run a different variant of the image add the tag at the end of the image separated by `:` 
+If no tag is specified when starting a container it will use the `latest` image. 
+To run a different variant of an image add the tag at the end of the image separated by `:` 
 ```
 $ docker run hello-world:linux
 ```
 
 ## start and run
-Once a container has finished executing it will exit. The hello-world for example exits as soon as it has displayed its message.
+Once a container has finished executing it will exit. For example a container based on the `hello-world` image will exit as soon as it has displayed its message.
 
-Each time `docker run` is executed a new container is started. We can list all containers that are running or has exited
+Each time `docker run` is executed a new container is started. We can list all containers that are running or has exited with
 ```
 $ docker ps -a
 ```
@@ -43,7 +56,7 @@ $ docker run --name my_container hello-world
 ```
 > --name string = Assign a name to the container
 
-Instead of creating a new container everytime we can start an existing container using its name or container id
+Instead of creating a new container all the time we can start an existing container using its name or container id
 ```
 $ docker start -i my_container
 ```
