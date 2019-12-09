@@ -1,0 +1,4 @@
+FROM ubuntu-openjdk-11
+WORKDIR /opt/application
+COPY web-application-*.jar web-application.jar
+ENTRYPOINT java -jar web-application.jar

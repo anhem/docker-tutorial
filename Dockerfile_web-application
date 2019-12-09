@@ -1,0 +1,6 @@
+FROM ubuntu:18.04
+RUN apt-get update
+RUN apt-get install -y openjdk-11-jdk
+WORKDIR /opt/application
+COPY web-application-*.jar web-application.jar
+ENTRYPOINT java -jar web-application.jar
